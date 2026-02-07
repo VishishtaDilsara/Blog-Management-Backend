@@ -1,4 +1,4 @@
-import { getBlogById } from "../models/blog";
+import { getBlogById } from "../models/blog.js";
 
 export const requireOwnerOrAdmin = async (req, res, next) => {
   try {
