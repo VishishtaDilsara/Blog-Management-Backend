@@ -203,5 +203,101 @@ Response:
 
 ```
 
+2. Get User by ID
+**Endpoint:** GET `/users/:id`
+- Access: Authenticated users
+- Authentication: Required
+
+Headers:
+```makefile
+Authorization: Bearer <JWT_TOKEN>
+```
+
+Response:
+```json
+{
+  "id": 2,
+  "name": "John Doe",
+  "email": "john@example.com",
+  "role": "USER"
+}
+
+```
+
+### 📝 Blogs:
+1. Create Blog 
+
+**Endpoint:** POST `/blogs`
+- Access: Authenticated users
+- Automatically generates a summary from the blog content
+
+Headers:
+```makefile
+Authorization: Bearer <JWT_TOKEN>
+```
+
+Request Body:
+```json
+{
+  "title": "Exploring Ancient Civilizations",
+  "content": "Long blog content goes here..."
+}
+
+```
+
+Response:
+```json
+{
+  "message": "Blog created successfully"
+}
+
+```
+
+2. Get All Blogs (Pagination) 
+
+**Endpoint:** GET `/blogs`
+
+Query Parameters:
+| Parameter | Description              | Default |
+| --------- | ------------------------ | ------- |
+| page      | Page number              | 1       |
+| limit     | Number of blogs per page | 5       |
+
+Response:
+```json
+{
+  "page": 1,
+  "limit": 5,
+  "total": 12,
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Exploring Ancient Civilizations",
+      "summary": "Summary Generated from Gemini model..."
+    }
+  ]
+}
+```
+
+2. Get Blog by ID 
+
+**Endpoint:** GET `/blogs/:id`
+
+
+Response:
+```json
+{
+  "id": 1,
+  "title": "Exploring Ancient Civilizations",
+  "content": "Full blog content...",
+  "summary": "Sumamry Generated from Gemini...",
+  "author": {
+    "id": 2,
+    "name": "John Doe"
+  }
+}
+```
+
+
 
 
