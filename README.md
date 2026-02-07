@@ -204,6 +204,7 @@ Response:
 ```
 
 2. Get User by ID
+
 **Endpoint:** GET `/users/:id`
 - Access: Authenticated users
 - Authentication: Required
@@ -279,7 +280,7 @@ Response:
 }
 ```
 
-2. Get Blog by ID 
+3. Get Blog by ID 
 
 **Endpoint:** GET `/blogs/:id`
 
@@ -296,6 +297,53 @@ Response:
     "name": "John Doe"
   }
 }
+```
+
+4. Update Blog 
+
+**Endpoint:** PUT `/blogs/:id`
+- Access: Blog owner or Admin
+- Authentication: Required
+
+Headers:
+```makefile
+Authorization: Bearer <JWT_TOKEN>
+```
+
+Request Body:
+```json
+{
+  "title": "Updated Blog Title",
+  "content": "Updated blog content..."
+}
+
+```
+
+Response:
+```json
+{
+  "message": "Blog updated successfully"
+}
+
+```
+
+4. Delete Blog 
+
+**Endpoint:** DELETE `/blogs/:id`
+- Access: Admin only
+- Authentication: Required
+
+Headers:
+```makefile
+Authorization: Bearer <ADMIN_TOKEN>
+```
+
+Response:
+```json
+{
+  "message": "Blog deleted successfully"
+}
+
 ```
 
 
