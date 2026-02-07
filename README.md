@@ -44,3 +44,10 @@ npm install
 ```bash
 mysql -u root -p -e "CREATE DATABASE IF NOT EXISTS blog_db;" && mysql -u root -p blog_db < schema.sql
 ```
+5. Start the Application
+```bash
+npm run dev
+```
+6. Verify Application Running
+http://localhost:3000
+
