@@ -33,4 +33,10 @@ It supports user authentication, role-based access control, blog creation and ma
 ```bash
 git clone https://github.com/VishishtaDilsara/Blog-Management-Backend.git
 cd blog-management-backend
+```
+2. Install Dependencies (Make sure Node.js (v18+) and MySQL (v8+) are installed.)
+```bash
+npm install
+```
+
 
