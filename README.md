@@ -95,6 +95,22 @@ Update the values as needed:
 JWT_SECRET="your_jwt_secret_key"
 GEMINI_API_KEY=your_gemini_api_key
 ```
+3. Build and Start Containers
+```bash
+docker compose up --build
+```
+4. Verify Application Running
+http://localhost:3000
 
+5. Stopping Containers
+```bash
+docker compose down
+```
+
+If you Modify `schema.sql` and want to reinitialize the database:
+```bash
+docker compose down -v
+docker compose up --build
+```
 
 
