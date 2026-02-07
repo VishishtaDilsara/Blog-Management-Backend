@@ -57,4 +57,11 @@ Open a terminal in the project root and run:
 ```bash
 node
 ```
+Then execute:
+```bash
+const { default: bcrypt } = await import("bcrypt");
+await bcrypt.hash("<Add_Your_Admin_Password>", 10);
+```
+Copy the generated hash
+
 
