@@ -138,6 +138,7 @@ Steps:
 3. Select File
 4. Choose the `postman_collection.json` file from the project root
 5. Click Import
+
 The collection will appear under the Collections tab.
 
 
@@ -419,5 +420,13 @@ The `summary` field stores AI-generated content derived from the blog body to im
 - Each blog belongs to exactly one user
 
 
+## 👨‍💻 Author
+
+**Vishishta Dilsara**  
+Software Engineering Undergraduate  
+University of Sri Jayewardenepura  
+
+📧 Email: vishishtadilsara2002@gmail.com  
+🌐 GitHub: https://github.com/VishishtaDilsara
 
 
