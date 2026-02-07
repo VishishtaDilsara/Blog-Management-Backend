@@ -8,6 +8,7 @@ import {
   updateBlogHandler,
 } from "../controllers/blogController.js";
 import { requireOwnerOrAdmin } from "../middlewares/ownershipMiddleware.js";
+import { requireRole } from "../middlewares/roleMiddleware.js";
 
 const blogRouter = Router();
 
