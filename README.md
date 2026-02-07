@@ -30,4 +30,5 @@ It supports user authentication, role-based access control, blog creation and ma
 
 ## Setup Instructions (Local Development – Without Docker)
 1. Clone the Repository
-`npm install`
+`git clone <your-github-repository-url>`
+`cd blog-management-backend`
