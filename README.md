@@ -130,4 +130,31 @@ docker exec -i blog_mysql mysql -u root -proot blog_db -e 'INSERT INTO users (na
 ```
 
 
+## 📌 API Documentation
+
+### Base URL:
+http://localhost:3000/api
+
+### Authentication :
+1. Register User
+**Endpoint**
+POST /auth/register
+
+Request Body:
+```json
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "password123"
+}
+```
+
+Response:
+```json
+{
+  "message": "User registered successfully"
+}
+```
+
+
 
