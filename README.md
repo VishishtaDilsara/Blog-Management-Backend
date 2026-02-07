@@ -38,5 +38,6 @@ cd blog-management-backend
 ```bash
 npm install
 ```
-
+3. Create Environment Variables
+Take a copy of `.env.example` and rename it as `.env`. Then add your Variables.
 
