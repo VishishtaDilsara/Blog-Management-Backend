@@ -79,5 +79,17 @@ VALUES (
 ```
 Now Admin created successfully!
 
+## 🐳 Running the Project with Docker
+1. Prerequisites
+- Docker Desktop
+- WSL2 enabled (Windows users)
+- Docker is running before executing commands
+
+2. Environment Variables <br>
+Create a .env file in the project root:
+```bash
+cp .env.example .env
+```
+
 
 
