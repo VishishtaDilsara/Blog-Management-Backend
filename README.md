@@ -346,6 +346,67 @@ Response:
 
 ```
 
+## 🗄 Database Schema Explanation
+
+### 👤 users Table
+The `users` table stores all registered users and their authentication details.
+
+```sql
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(150) NOT NULL UNIQUE,
+  password_hash VARCHAR(255) NOT NULL,
+  role ENUM('ADMIN', 'USER') DEFAULT 'USER',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+Column Explanation:
+| Column          | Description                                 |
+| --------------- | ------------------------------------------- |
+| `id`            | Unique identifier for each user             |
+| `name`          | Full name of the user                       |
+| `email`         | Unique email address used for login         |
+| `password_hash` | Hashed password stored using bcrypt         |
+| `role`          | User role (`ADMIN` or `USER`)               |
+| `created_at`    | Timestamp when the user account was created |
+
+
+### 📝 blogs Table
+The `blogs` table stores all blog posts created by users.
+
+```sql
+CREATE TABLE blogs (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  title VARCHAR(255) NOT NULL,
+  content LONGTEXT NOT NULL,
+  summary TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  CONSTRAINT fk_blogs_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+```
+Column Explanation:
+| Column       | Description                                 |
+| ------------ | ------------------------------------------- |
+| `id`         | Unique identifier for each blog post        |
+| `user_id`    | References the author of the blog           |
+| `title`      | Blog title                                  |
+| `content`    | Full blog content                           |
+| `summary`    | Automatically generated summary of the blog |
+| `created_at` | Timestamp when the blog was created         |
+| `updated_at` | Timestamp of the last update                |
+
+
+Automatic Summarization:<br>
+The `summary` field stores AI-generated content derived from the blog body to improve readability and listing performance.
+
+### 🔗 Relationships
+- A one-to-many relationship exists between users and blogs
+- One user can create multiple blogs
+- Each blog belongs to exactly one user
+
 
 
 
