@@ -51,3 +51,10 @@ npm run dev
 6. Verify Application Running
 http://localhost:3000
 
+### Creating an Admin User (Local Setup)
+Step 1: Generate a Password Hash <br>
+Open a terminal in the project root and run:
+```bash
+node
+```
+
