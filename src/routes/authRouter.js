@@ -3,14 +3,11 @@ import { login, register } from "../controllers/authController.js";
 
 const authRouter = Router();
 
-/**
- * POST /auth/register
- */
+/* POST /auth/register */
 authRouter.post("/register", register);
 
-/**
- * POST /auth/login
- */
+/* POST /auth/login */
+
 authRouter.post("/login", login);
 
 export default authRouter;

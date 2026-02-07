@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import authRouter from "./routes/authRouter.js";
 import userRouter from "./routes/userRouter.js";
+import blogRouter from "./routes/blogRouter.js";
 
 const app = express();
 
@@ -15,5 +16,6 @@ app.get("/", (req, res) => {
 });
 app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
+app.use("/api/blogs", blogRouter);
 
 export default app;

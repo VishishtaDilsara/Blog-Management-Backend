@@ -5,15 +5,10 @@ import { requireRole } from "../middlewares/roleMiddleware.js";
 
 const userRouter = Router();
 
-/**
- * GET /users - Admin only
- */
+/* GET /users - Admin only */
 userRouter.get("/", authMiddleware, requireRole("ADMIN"), getUsers);
 
-/**
- * GET /users/:id - Protected
- * (optional extra: you can restrict to self or admin in controller/middleware later)
- */
+/*GET /users/:id - Protected*/
 userRouter.get("/:id", authMiddleware, getUser);
 
 export default userRouter;

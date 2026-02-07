@@ -1,13 +1,13 @@
 import { Router } from "express";
-import { authMiddleware } from "../middlewares/authMiddleware";
+import { authMiddleware } from "../middlewares/authMiddleware.js";
 import {
   createBlogHandler,
   deleteBlogHandler,
   getBlogByIdHandler,
   getBlogsHandler,
   updateBlogHandler,
-} from "../controllers/blogController";
-import { requireOwnerOrAdmin } from "../middlewares/ownershipMiddleware";
+} from "../controllers/blogController.js";
+import { requireOwnerOrAdmin } from "../middlewares/ownershipMiddleware.js";
 
 const blogRouter = Router();
 
