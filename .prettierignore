@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log
+
+# Environment files
+.env
+.env.*
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Docs & API collections
+README.md
+postman_collection.json
+
+# Build artifacts (optional)
+dist/
+build/

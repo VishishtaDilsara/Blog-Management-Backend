@@ -1,0 +1,333 @@
+{
+  "info": {
+    "_postman_id": "4a7fac7d-218a-455c-a587-3701b73703fa",
+    "name": "Blog Backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44607684",
+    "_collection_link": "https://go.postman.co/collection/44607684-4a7fac7d-218a-455c-a587-3701b73703fa?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Testing",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BASE_URL}}",
+          "host": [
+            "{{BASE_URL}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User Register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Test01\",\r\n    \"email\": \"test01@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/api/auth/register",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"test01@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/api/auth/login",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Admin Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"admin@blog.com\",\r\n    \"password\": \"admin123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/api/auth/login",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All users - Admin",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3MDM5OTg2NywiZXhwIjoxNzcwNDg2MjY3fQ.lhjyU--ROZZZA2LayawnKX2MV7bcvIUzwapk4H06lWs",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BASE_URL}}/api/users/",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get User by ID",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzcwMzk5MTY4LCJleHAiOjE3NzA0ODU1Njh9.G-JHg_9OTywlMJ1erU2YTacGOl9dwqIgMjoekK8rRZA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BASE_URL}}/api/users/2",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Blog Post",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzcwNDU3NTk2LCJleHAiOjE3NzA1NDM5OTZ9.WGapZmDuDyJttxt_AcZXGXeWgr6xfKhHM379YLx5NwE",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{BASE_URL}}/api/blogs",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "blogs"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Blog by ID",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BASE_URL}}/api/blogs/1",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "blogs",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Blogs",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BASE_URL}}/api/blogs?page=1&limit=5",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "blogs"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "limit",
+              "value": "5",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Blog - Admin | Owner",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzcwNDU5MjI0LCJleHAiOjE3NzA1NDU2MjR9.JOLG5GBxsJm5xxnsPhu7-Qge2m_35kxe0utSXqKUmwg",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Exploring the Cultural Heritage of Ancient Cities (Updated)\",\r\n  \"content\": \"Ancient cities continue to fascinate travelers and historians alike because they preserve the stories, traditions, and architectural achievements of early civilizations. Exploring such cities allows visitors to walk through history and understand how societies evolved over time.\\n\\nPreserving cultural heritage is essential in a rapidly modernizing world. Many historical sites face threats from environmental damage, urban expansion, and mass tourism. Sustainable tourism practices help protect these locations while still allowing people to experience their beauty.\\n\\nLearning about local customs, respecting traditions, and supporting conservation initiatives can greatly enhance the travel experience. Responsible travel not only benefits visitors but also helps local communities preserve their cultural identity.\\n\\nBy valuing and protecting ancient cities, future generations can continue to learn from and appreciate the richness of human history.\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/api/blogs/2",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "blogs",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Blog - Admin",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3MDQ1OTQ0MywiZXhwIjoxNzcwNTQ1ODQzfQ.Z2yfFxNsdAdx4QkljfYAsxsKyRKbmm6Uiir4PELesCg",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Exploring the Cultural Heritage of Ancient Cities (Updated)\",\r\n  \"content\": \"Ancient cities continue to fascinate travelers and historians alike because they preserve the stories, traditions, and architectural achievements of early civilizations. Exploring such cities allows visitors to walk through history and understand how societies evolved over time.\\n\\nPreserving cultural heritage is essential in a rapidly modernizing world. Many historical sites face threats from environmental damage, urban expansion, and mass tourism. Sustainable tourism practices help protect these locations while still allowing people to experience their beauty.\\n\\nLearning about local customs, respecting traditions, and supporting conservation initiatives can greatly enhance the travel experience. Responsible travel not only benefits visitors but also helps local communities preserve their cultural identity.\\n\\nBy valuing and protecting ancient cities, future generations can continue to learn from and appreciate the richness of human history.\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/api/blogs/4",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "blogs",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE_URL",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
