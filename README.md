@@ -113,4 +113,21 @@ docker compose down -v
 docker compose up --build
 ```
 
+### Creating an Admin User (Docker Setup)
+Step 1: Generate a Password Hash
+```bash
+node
+```
+```bash
+const { default: bcrypt } = await import("bcrypt");
+await bcrypt.hash("<Add_Your_Admin_Password>", 10);
+```
+Copy the generated hash.
+
+Step 2: Create an Admin User
+```bash
+docker exec -i blog_mysql mysql -u root -proot blog_db -e 'INSERT INTO users (name,email,password_hash,role) VALUES (''Admin4'',''admin4@blog.com'',''$2b$10$VuP9e5vN3Y6ZCLhBnigshO1C9qFOSsAad.pfCaFdo0.fY0eLqkiZe'',''ADMIN'');'
+```
+
+
 
