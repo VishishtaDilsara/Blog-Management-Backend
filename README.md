@@ -38,6 +38,9 @@ cd blog-management-backend
 ```bash
 npm install
 ```
-3. Create Environment Variables
-Take a copy of `.env.example` and rename it as `.env`. Then add your Variables.
+3. Take a copy of `.env.example` and rename it as `.env`. Then add your environment variables.
 
+4. Create Database and Tables from Terminal
+```bash
+mysql -u root -p -e "CREATE DATABASE IF NOT EXISTS blog_db;" && mysql -u root -p blog_db < schema.sql
+```
