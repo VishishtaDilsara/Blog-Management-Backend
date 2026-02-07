@@ -126,7 +126,7 @@ Copy the generated hash.
 
 Step 2: Create an Admin User
 ```bash
-docker exec -i blog_mysql mysql -u root -proot blog_db -e 'INSERT INTO users (name,email,password_hash,role) VALUES (''Admin4'',''admin4@blog.com'',''$2b$10$VuP9e5vN3Y6ZCLhBnigshO1C9qFOSsAad.pfCaFdo0.fY0eLqkiZe'',''ADMIN'');'
+docker exec -i blog_mysql mysql -u root -proot blog_db -e 'INSERT INTO users (name,email,password_hash,role) VALUES (''<<ADMIN_USERNAME_YOU_WANT>>'',''<<ADMIN_EMAIL_YOU_WANT>>'',''<<HASHED PASSWORD>>'',''ADMIN'');'
 ```
 
 
