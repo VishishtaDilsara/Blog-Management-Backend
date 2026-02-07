@@ -64,4 +64,20 @@ await bcrypt.hash("<Add_Your_Admin_Password>", 10);
 ```
 Copy the generated hash
 
+Step 2: Insert Admin into MySQL <br>
+Log in to your local MySQL instance and run:
+```bash
+USE blog_db;
+
+INSERT INTO users (name, email, password_hash, role)
+VALUES (
+  'Admin',
+  'admin@blog.com',
+  '<PASTE_GENERATED_HASH_HERE>',
+  'ADMIN'
+);
+```
+Now Admin created successfully!
+
+
 
