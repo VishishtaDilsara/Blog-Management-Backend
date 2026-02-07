@@ -30,5 +30,7 @@ It supports user authentication, role-based access control, blog creation and ma
 
 ## Setup Instructions (Local Development – Without Docker)
 1. Clone the Repository
-`git clone <your-github-repository-url>`
-`cd blog-management-backend`
+```bash
+git clone https://github.com/VishishtaDilsara/Blog-Management-Backend.git
+cd blog-management-backend
+
