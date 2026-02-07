@@ -138,10 +138,7 @@ http://localhost:3000/api
 ### Authentication :
 1. Register User 
 
-**Method:** `POST`
-```bash
-/auth/register
-```
+**Endpoint:** `POST /auth/register`
 
 Request Body:
 ```json
@@ -158,6 +155,28 @@ Response:
   "message": "User registered successfully"
 }
 ```
+
+2. Login User 
+
+**Endpoint:** `POST /auth/login`
+
+Request Body:
+```json
+{
+  "email": "john@example.com",
+  "password": "password123"
+}
+```
+
+Response:
+```json
+{
+  "message": "Login successful",
+  "token": "<JWT_TOKEN>"
+}
+
+```
+
 
 
 
