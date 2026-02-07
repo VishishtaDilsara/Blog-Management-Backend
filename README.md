@@ -138,7 +138,7 @@ http://localhost:3000/api
 ### Authentication :
 1. Register User 
 
-**Endpoint:** `POST /auth/register`
+**Endpoint:** POST `/auth/register`
 
 Request Body:
 ```json
@@ -158,7 +158,7 @@ Response:
 
 2. Login User 
 
-**Endpoint:** `POST /auth/login`
+**Endpoint:** POST `/auth/login`
 
 Request Body:
 ```json
@@ -177,6 +177,31 @@ Response:
 
 ```
 
+
+### Users:
+1. Get All Users 
+
+**Endpoint:** GET `/users`
+- Access: Admin only
+- Authentication: Required
+
+Headers:
+```makefile
+Authorization: Bearer <ADMIN_TOKEN>
+```
+
+Response:
+```json
+[
+  {
+    "id": 1,
+    "name": "Admin",
+    "email": "admin@blog.com",
+    "role": "ADMIN"
+  }
+]
+
+```
 
 
 
