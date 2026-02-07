@@ -1,5 +1,5 @@
 # Blog Management Backend  
-(Node.js + Express.js + MySQL + Docker)
+(Node.js + Express.js + MySQL + Docker + Gemini API)
 
 This project is a backend system for a **Blog Management Platform**.  
 It supports user authentication, role-based access control, blog creation and management, automatic blog summarization, pagination, and containerized deployment.
@@ -128,6 +128,17 @@ Step 2: Create an Admin User
 ```bash
 docker exec -i blog_mysql mysql -u root -proot blog_db -e 'INSERT INTO users (name,email,password_hash,role) VALUES (''<<ADMIN_USERNAME_YOU_WANT>>'',''<<ADMIN_EMAIL_YOU_WANT>>'',''<<HASHED PASSWORD>>'',''ADMIN'');'
 ```
+## 📮 Postman Collection
+
+This project includes a ready-to-use **Postman collection** to test all API endpoints.
+
+Steps:
+1. Open Postman
+2. Click Import (top-left corner)
+3. Select File
+4. Choose the `postman_collection.json` file from the project root
+5. Click Import
+The collection will appear under the Collections tab.
 
 
 ## 📌 API Documentation
@@ -135,7 +146,7 @@ docker exec -i blog_mysql mysql -u root -proot blog_db -e 'INSERT INTO users (na
 ### Base URL:
 http://localhost:3000/api
 
-### Authentication :
+### 🔐 Authentication :
 1. Register User 
 
 **Endpoint:** POST `/auth/register`
@@ -178,7 +189,7 @@ Response:
 ```
 
 
-### Users:
+### 👥 Users:
 1. Get All Users 
 
 **Endpoint:** GET `/users`
